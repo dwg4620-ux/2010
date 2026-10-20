@@ -320,7 +320,7 @@ body.game-started .app-root { display:block; }
       <path d="M48 150L170 177L292 150L216 260L124 260Z" fill="#fff0f7" opacity=".88"/><path d="M170 177L170 345M84 176L139 260L110 340M256 176L201 260L230 340" fill="none" stroke="#fff6fa" stroke-width="2" opacity=".8"/>
       <g transform="translate(170 273)"><path d="M-9 0C-55-36-86-7-58 12C-40 23-21 12-9 4Z" fill="url(#ribbon)" stroke="#c82c62" stroke-width="2"/><path d="M9 0C55-36 86-7 58 12C40 23 21 12 9 4Z" fill="url(#ribbon)" stroke="#c82c62" stroke-width="2"/><path d="M-11 9L-24 76L-1 56L10 81L11 9Z" fill="#e94579" stroke="#c82c62" stroke-width="2"/><path d="M11 9L22 69L39 52L29 7Z" fill="#f35d8c" stroke="#c82c62" stroke-width="2"/><ellipse rx="13" ry="11" fill="#d92f68" stroke="#b82055" stroke-width="2"/></g>
     </svg></span>`;
-    $('gateGreeting').innerHTML=`Thân tặng bạn <strong>${name.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}</strong><br>Chúc bạn ngày 20/10 luôn rạng rỡ như hoa, dịu dàng mà mạnh mẽ, được yêu thương thật nhiều và mọi điều mong ước đều nở rộ. Chúc bạn luôn vui vẻ, tự tin và học tiếng Trung thật giỏi nhé! 💗`;
+    $('gateGreeting').innerHTML=`Thân tặng bạn <strong>${name.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}</strong><br>Chúc bạn ngày 20/10 luôn rạng rỡ như hoa, dịu dàng mà mạnh mẽ, được yêu thương thật nhiều và mọi điều mong ước đều nở rộ. Chúc bạn luôn vui vẻ, tự tin và hạnh phúc nhé! 💗`;
     $('gateGreeting').hidden=false;$('enterGameButton').hidden=false;$('bloomButton').hidden=true;$('gateHint').textContent='Bó hoa của riêng bạn đã sẵn sàng 🌸';
   });
   $('enterGameButton').addEventListener('click',()=>{document.body.classList.add('game-started');$('nameGate').hidden=true;try{startMusic();}catch(_){}});
@@ -413,8 +413,8 @@ body.game-started .app-root { display:block; }
   // Quiz: each answer is evaluated immediately, and every question locks after selection.
   const questions = [
     { q: 'Ngày Phụ nữ Việt Nam được tổ chức vào ngày nào?', a: ['8/3', '20/10', '20/11', '1/6'], correct: 1, explain: 'Chính xác! Ngày Phụ nữ Việt Nam là 20/10.' },
-    { q: 'Món quà tinh thần nào thường khiến người nhận vui nhất?', a: ['Sự quan tâm chân thành', 'Chỉ cần quà thật đắt', 'Không cần lời chúc', 'Quên mất ngày đặc biệt'], correct: 0, explain: 'Đúng rồi! Sự quan tâm chân thành luôn rất đáng quý.' },
-    { q: 'Màu nào thường gợi cảm giác dịu dàng, ngọt ngào trong chủ đề này?', a: ['Xám bê tông', 'Đen tuyền', 'Hồng pastel', 'Nâu đất'], correct: 2, explain: 'Chuẩn luôn! Hồng pastel tạo cảm giác dịu dàng và ấm áp.' }
+    { q: 'Món quà tinh thần nào thường khiến người nhận vui nhất?', a: ['Sự quan tâm chân thành', 'Chỉ cần quà thật đắt', 'Không cần quà', 'Món ăn ngon'], correct: 0, explain: 'Đúng rồi! Sự quan tâm chân thành luôn rất đáng quý.' },
+    { q: 'Hôm nay bạn đang mong chờ điều gì?', a: ['Không quan tâm cho lắm', 'Hát karaoke', 'Được ai đó tặng quà', 'Sếp cho thưởng 21/10'], correct: 2, explain: 'Chuẩn luôn! Chắc chắn là vậy rồi Được ai đó tặng quà' }
   ];
   const quizAnswers = Array(questions.length).fill(null);
   const quizHost = $('quizQuestions');
